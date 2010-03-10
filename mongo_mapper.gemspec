@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{mongo_mapper}
-  s.version = "0.7.0"
+  s.version = "0.7.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["John Nunemaker"]
-  s.date = %q{2010-03-04}
+  s.date = %q{2010-03-09}
   s.default_executable = %q{mmconsole}
   s.email = %q{nunemaker@gmail.com}
   s.executables = ["mmconsole"]
@@ -22,7 +22,6 @@ Gem::Specification.new do |s|
      "LICENSE",
      "README.rdoc",
      "Rakefile",
-     "VERSION",
      "bin/mmconsole",
      "lib/mongo_mapper.rb",
      "lib/mongo_mapper/document.rb",
@@ -64,6 +63,7 @@ Gem::Specification.new do |s|
      "lib/mongo_mapper/support.rb",
      "lib/mongo_mapper/support/descendant_appends.rb",
      "lib/mongo_mapper/support/find.rb",
+     "lib/mongo_mapper/version.rb",
      "mongo_mapper.gemspec",
      "performance/read_write.rb",
      "specs.watchr",
@@ -120,7 +120,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://github.com/jnunemaker/mongomapper}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.6}
+  s.rubygems_version = %q{1.3.5}
   s.summary = %q{A Ruby Object Mapper for Mongo}
   s.test_files = [
     "test/active_model_lint_test.rb",
