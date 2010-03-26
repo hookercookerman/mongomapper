@@ -38,6 +38,14 @@ module MongoMapper
     end
 
     module InstanceMethods
+      def destroyed?
+        !!_root_document.try(:destroyed?)
+      end
+
+      def new?
+        _root_document.try(:new?) || @new
+      end
+
       def save(options={})
         if result = _root_document.try(:save, options)
           @new = false
@@ -51,7 +59,7 @@ module MongoMapper
         end
         result
       end
-      
+
       def _parent_document=(value)
         @_root_document   = value._root_document
         @_parent_document = value
